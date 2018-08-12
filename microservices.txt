@@ -1,0 +1,30 @@
+limits-services
+limits-cloud-configuration - get data from git or local (prod,qa,default env)
+Currency-exchange-services - 8000,8001,80002
+Currency-conversion-service - 8100
+Feign - help to talk other servies
+Ribbon - Load balancing (8100 later assign eureka server port)
+Eureka Naming Server - ask current running services and help for load blancing (Service discovery, service registery for calling services)
+ENS - First services will register ENS then Ribbeon will find those service iques with help of ENS Service Discovery mechaninsm.
+NetFlix Zuul server(8761) - api gateway , before start make sure eureka server executed
+http://localhost:8765/{application.name}/{uri}
+http://localhost:8765/currency-exchange-service/currency-exchange/from/AUD/to/INR
+http://localhost:8765/currency-conversion-service/currency-converter-feign/from/AUD/to/INR/quantity/1000
+Calling between microservices using ZUUL - Add in Feign proxy service
+
+Spring Cloud Sleuth - it is for assigning unique id to services for tracing in distribued mode with Zipkins and Rabbit MQ
+
+1)erlang
+	https://www.erlang.org/downloads
+2)Install Rabit MQ
+	https://www.rabbitmq.com/download.html
+
+
+
+
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <project url>
+git push -f origin master
